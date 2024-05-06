@@ -1,36 +1,60 @@
-"""
-Lists are a collection of data
-"""
+"""This Python code demonstrates the basic operations on sets such as creation, addition, removal, membership check,
+set operations like union, intersection, difference, and iteration."""
 
+import os
 
-my_list = [80, 96, 72, 100, 8]
-print(my_list)
-my_list.append(1000)
-print(my_list)
-my_list.insert(2, 1000)
-print(my_list)
-my_list.remove(8)
-print(my_list)
-my_list.pop(0)
-print(my_list)
-my_list.sort()
-print(my_list)
+# Function to clear the console screen
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-"""
-The provided Python code is performing various operations on a list named `my_list`. 
+# Function to display a title
+def display_title(title):
+    clear_screen()
+    print("=" * len(title))
+    print(title)
+    print("=" * len(title))
+    print()
 
-Initially, `my_list` is defined with five integer elements: `[80, 96, 72, 100, 8]`. This list is then printed to the console with `print(my_list)`.
+# Example code demonstrating the use of sets
 
-Next, the `append` method is used to add the integer `1000` to the end of the list. The `append` method in Python adds an element to the end of the list. The updated list is then printed again.
+# Display title
+title = "Demonstrating the Use of Sets in Python"
+display_title(title)
 
-Following this, the `insert` method is used to add another `1000` at the second index of the list (Python uses zero-based indexing). The `insert` method in Python inserts an element at a specific position in the list. The list, now with the newly inserted element, is printed.
+# Create two sets
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
 
-The `remove` method is then used to remove the first occurrence of the integer `8` from the list. The `remove` method in Python removes the first occurrence of the specified value. The list, now without the `8`, is printed.
+# Print the sets
+print("Set 1:", set1)
+print("Set 2:", set2)
 
-The `pop` method is used next to remove the element at the zeroth index of the list. The `pop` method in Python removes the element at the specified position, or the last item if the index is not specified. The list, now without the first element, is printed.
+# Adding elements to a set
+set1.add(6)
+print("After adding 6 to Set 1:", set1)
 
-Finally, the `sort` method is used to sort the elements of the list in ascending order. The `sort` method in Python sorts the elements of a list. The sorted list is then printed.
-"""
+# Removing elements from a set
+set2.remove(8)
+print("After removing 8 from Set 2:", set2)
+
+# Checking membership
+print("Is 3 in Set 1?", 3 in set1)
+print("Is 9 in Set 2?", 9 in set2)
+
+# Set operations
+union_set = set1.union(set2)
+print("Union of Set 1 and Set 2:", union_set)
+
+intersection_set = set1.intersection(set2)
+print("Intersection of Set 1 and Set 2:", intersection_set)
+
+difference_set = set1.difference(set2)
+print("Difference of Set 1 and Set 2:", difference_set)
+
+# Iterating over a set
+print("Iterating over Set 1:")
+for element in set1:
+    print(element)
 
 
 
