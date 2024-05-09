@@ -3,9 +3,11 @@ set operations like union, intersection, difference, and iteration."""
 
 import os
 
+
 # Function to clear the console screen
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
+
 
 # Function to display a title
 def display_title(title):
@@ -15,7 +17,6 @@ def display_title(title):
     print("=" * len(title))
     print()
 
-# Example code demonstrating the use of sets
 
 # Display title
 title = "Demonstrating the Use of Sets in Python"
@@ -55,10 +56,3 @@ print("Difference of Set 1 and Set 2:", difference_set)
 print("Iterating over Set 1:")
 for element in set1:
     print(element)
-
-
-
-
-
-
-
