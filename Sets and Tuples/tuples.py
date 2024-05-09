@@ -1,8 +1,10 @@
 import os
 
+
 # Function to clear the console screen
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
+
 
 # Function to display a title
 def display_title(title):
@@ -12,7 +14,6 @@ def display_title(title):
     print("=" * len(title))
     print()
 
-# Example code demonstrating the use of tuples
 
 # Display title
 title = "Demonstrating the Use of Tuples in Python"
