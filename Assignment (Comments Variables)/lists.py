@@ -1,8 +1,10 @@
 import os
 
+
 # Function to clear the console screen
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
+
 
 # Function to display a title
 def display_title(title):
@@ -11,6 +13,7 @@ def display_title(title):
     print(title)
     print("=" * len(title))
     print()
+
 
 # Title
 title = "Python Lists Assignment"
